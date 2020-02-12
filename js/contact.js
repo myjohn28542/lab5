@@ -1,5 +1,3 @@
-// index.js
-
 let e = false;
 
 let M=0;
@@ -123,6 +121,28 @@ db.collection('users').orderBy("Name").onSnapshot(doc =>{
         let thirdCell = row.insertCell(2)
         let str = String(item.data().Email)
         let mail = ""
+        let id = item.id;
+let detail = String(item.data().Detail);
+let fourthCell = row.insertCell(3)
+
+fourthCell.textContent = 'X'
+
+        firstCell.addEventListener('click',function(){
+
+            console.log('oh');
+            $("#myModal").modal();
+            document.querySelector('#mt').textContent = item.data().Name;
+            document.querySelector('#mb').textContent = detail;
+
+
+        });
+
+        fourthCell.addEventListener('click',function(){
+
+            console.log(id);
+            db.collection('users').doc(id).delete();
+
+        });
         
         for (let i = 0; i < str.length; i++) {
             if (i==0||str[i]=='@'||str[i]=='.') {
@@ -195,15 +215,3 @@ db.collection('users').orderBy("Name").onSnapshot(doc =>{
 
     // $('h4').text(gpa/credit)
 })
-
-
-
-  
-//     })
-//     console.log(gpa/credit)
-//     $('h4').text(gpa/credit)
-// })
-
-// db.collection('users').where('grade', '>', 3).get().then(res =>{
-//     res.forEach(item => console.log(item.data()))
-// })
