@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css" integrity="sha256-kx16nUTlNRyEpdk7cvpnqblbDbTe/nADul9o2uYeGSw=" crossorigin="anonymous" />
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.18/css/AdminLTE.min.css">
+   <!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.18/css/skins/_all-skins.min.css" integrity="sha256-ZlEo/0WbhG/pXIL3zcbJoTW9lFxlmSu8a7syXHfTURo=" crossorigin="anonymous" />
+
+ 
+  
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    
+      
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/6.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Suphachai Mawong</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      
+      <ul class="sidebar-menu" data-widget="tree">
+        
+      </li>
+      <li class="treeview">
+        <a href="index.html">
+          <i class="fa fa-share"></i> <span>Home</span>
+          
+            
+          </span>
+        </a>
+      
+      </li>
+        <li class="treeview">
+          <a href="lab3_2.html">
+            <i class="fa fa-files-o"></i>
+            <span>About me</span>
+           
+            <span class="pull-right-container">
+             </span>
+             
+            
+          </a>
+       
+        <li>
+          <a href="lab3_3.html">
+            <i class="fa fa-th"></i> <span>Gallery</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="lab3_4.html">
+            <i class="fa fa-edit"></i>
+            <span>Contact me</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+          
+        </li>
+
+        <li>
+          <a href="lab3_3.html">
+            <i class="fa fa-th"></i> <span>Gallery</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="game.html">
+            <i class="fa fa-gamepad" aria-hidden="true"></i>
+            <span>Game me</span>
+            <span class="pull-right-container">
+              
+            </span>
+          </a>
+          
+        </li>
+        
+          
+      
+        
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  
+  <div class="content-wrapper">
+    
+  
+      <ol class="breadcrumb">
+      
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+     
+        <div class="col-lg-12 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>Hi, Are you smart? .</h3>
+              <h3> GAME</h3>
+
+              <p>5555555</p>
+              <div class="pull-left hidden-xs">
+                
+              
+                      
+
+          
+        </div>
+            </div>
+            
+            <center>
+
+                <div>
+                    <div>
+                        <p > 
+                            <h1>High or Low</h1>
+                        </p>
+                        
+                        <p id="mode">
+                            <button id="ez"> Easy</button>
+                            <button id="nor"> Normall</button>
+                            <button id="hard"> Hard</button>
+                        </p>
+        
+                        <h3> Hp <p id="hp"></p></h3>
+                        
+                        
+                    </div>
+                    <br>
+                    
+                    <div>
+                        <p >
+                            Rule : Guess <span style="color: tomato;"> one</span>  number from 1-100 <br>
+                            If wrong, you will lose HP and hint will show up.
+                        </p>
+                    </div>
+                        <form action="" id="myForm" onkeydown="return event.key != 'Enter';" style="color: black;" >
+                            <input type="number" id="num" placeholder="Number">
+                            
+                            <p>
+                                <button type="button" id="enter" class="enter"> Enter</button>
+                                <button type="reset" class="reset" > try again</button>
+                            </p>
+                            
+                            
+        
+                        </form>
+        
+                        <p id="result"></p>
+                        previous answer : <span id="hint"></span> 
+                        <p> hint : <span id="hint2"> </span> </p>
+        
+                        <div class="card">
+                            
+        
+                        </div>
+        
+        
+                    
+                    </div> 
+        
+        
+            </center>
+            
+</body>
+<script src="./js/game.js"></script>
+</html>
+
